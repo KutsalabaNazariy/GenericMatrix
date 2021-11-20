@@ -3,25 +3,19 @@ package main;
 public class Main {
 
     public static void main(String [] args) throws InstantiationException, IllegalAccessException {
+        /*MatrixGeneric<String> str = new MatrixGeneric<>(3, 3, String.class);
+        MatrixGeneric<String> str2 = str;
+        MatrixImmutableDouble str3 = new MatrixImmutableDouble(2,3, true);
 
-        MatrixMutable<String> obj = new MatrixMutable<String>(8, 8);
-        for(int j = 0; j < obj.matrix.size(); j++) {
-            System.out.println(obj.matrix.get(j));
-        }
-        System.out.println(obj.getClass());
-        obj.fillMatrixString();
-        for(int j = 0; j < obj.matrix.size(); j++) {
-            System.out.println(obj.matrix.get(j));
-        }
-        obj.fillMatrixInteger(-80);
-        System.out.println("Integer Matrix");
-        for(int j = 0; j < obj.matrix.size(); j++) {
-            System.out.println(obj.matrix.get(j));
-        }
-        obj.fillMatrixDouble(20);
-        System.out.println("Double Matrix");
-        for(int j = 0; j < obj.matrix.size(); j++) {
-            System.out.println(obj.matrix.get(j));
-        }
+        str.fillRandomMatrix();
+        str.printMatrix();
+        str2.printMatrix();
+
+        System.out.println(str2.hashCode() == str.hashCode());
+        System.out.println();*/
+        MatrixGeneric<Integer> A = new MatrixGeneric<>(3,3, Integer.class);
+        A.fillRandomMatrix();
+        A.printMatrix();
+
     }
 }

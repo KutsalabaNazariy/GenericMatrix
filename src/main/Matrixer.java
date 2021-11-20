@@ -1,10 +1,22 @@
 package main;
 
+import java.util.ArrayList;
+
 public interface Matrixer<T> {
 
-    void fillMatrixString();
+    void fillRandomMatrix() throws IllegalAccessException;
 
-    void fillMatrixInteger(int firstNum);
+    T giveElement(int row, int column) throws IllegalAccessException;
 
-    void fillMatrixDouble(double firstNum);
+    ArrayList<T> giveRow(int row) throws IllegalAccessException;
+
+    ArrayList<T> giveColumn(int column) throws IllegalAccessException;
+
+    String sizeMatrix();
+
+    boolean equals(Object obj);
+
+    int hashCode();
+
+    void printMatrix();
 }
